@@ -14,7 +14,9 @@ RUN apt-get update && apt-get install -y \
     libxrender1 \
     libxext6 \
     libgl1-mesa-glx \
-    # Install Python dependencies from requirements.txt
+    python3-pip \
+    python3-rpi.gpio \
+    python3-spidev \
     && pip3 install --no-cache-dir -r requirements.txt
 
 # Copy the rest of the application's code into the container
